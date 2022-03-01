@@ -1,7 +1,7 @@
 # Tkinter-Keras-Plant-Disease-Detection
 This is a Python Program that is built using Tkinter that can detect the diseases of plants such as Tomato, Pepper, and Potato. Keras sequential model is also used. 
 # How to use
-1) Download and install python from https://www.python.org/downloads/. Note: Required version should be from 3.7 - 3.9
+1) Download and install python from https://www.python.org/downloads/release/python-397/ (3.9.7 version). Note: Required version should be from 3.7 - 3.9
 2) Download the zip file of this project
 3) Extract the contents of the zip file into one folder
 4) Download the model at https://drive.google.com/file/d/1F82SEW3sTNgZTJUD_7ZMEAbluvxL0t6F/view?usp=sharing
