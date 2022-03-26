@@ -17,6 +17,10 @@ def mainPage():
     root.destroy()
     import main
 
+def plantList():
+    root.destroy()
+    import plantList
+
 root = Tk()
 wt = root.winfo_screenwidth()
 ht = root.winfo_screenheight()
@@ -61,7 +65,7 @@ pic3 = pic3.resize((int(new_width), int(new_height)), Image.ANTIALIAS)
 pic3 = ImageTk.PhotoImage(pic3)
 canvas1.create_image( (wt/3)+(wt/3), ht/3, image = pic3, anchor = "nw")
 
-btn = Button(root, height="3", width="15", text="List of Plants")
+btn = Button(root, height="3", width="15", text="List of Plants", command=plantList)
 btn2 = Button(root, height="3", width="15", text="Back", command=mainPage)
 
 btn_canvas = canvas1.create_window( wt/2.6, ht/1.25, anchor = "nw", window = btn)
