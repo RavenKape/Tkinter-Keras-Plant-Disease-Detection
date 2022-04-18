@@ -76,7 +76,7 @@ def showimage():
     canvas1.create_text((wt/2), (ht/2), text = "Result:\n"+ finalresult, font = "Times " + str(font_size) + " bold", tags = "result")
 
     management = ""
-    if Categories[np.argmax(result[0])] == "Potato___Early_blight":
+    if Categories[np.argmax(result[0])] == "Pepper_bell___Bacterial_spot":
         text_wt = (wt/3.5)+(wt/4)
         text_ht = (ht/1.5)
         management = "Remove the crop debris \nand disinfect tools after harvest. \nThen, purchase disease-free \nseed and wash them in a bleach \ntreatment. Crop rotation \nis also recommended."
@@ -84,10 +84,46 @@ def showimage():
         text_wt = (wt/4.48)+(wt/3.75)
         text_ht = (ht/1.7)
         management = "The plant is healthy"
-    elif Categories[np.argmax(result[0])] == "Potato___Early_bliht":
+    elif Categories[np.argmax(result[0])] == "Potato___Early_blight":
+        text_wt = (wt/3.5)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Select a late-season variety. \nAlso, time irrigation to minimize \nleaf wetness to allow \nsufficient time for leaves to \ndry before nightfall"
+    elif Categories[np.argmax(result[0])] == "Potato___healthy":
         text_wt = (wt/4.48)+(wt/3.75)
         text_ht = (ht/1.7)
-        management = "The plant is healthy"    
+        management = "The plant is healthy"  
+    elif Categories[np.argmax(result[0])] == "Potato___Late_blight":
+        text_wt = (wt/3.4)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Eliminate cull piles and volunteer \npotatoes and apply fungicides \nwhen necessary. Also, drain \nair to facilitate the drying \nof foliage each day." 
+    elif Categories[np.argmax(result[0])] == "Tomato___Bacterial_spot":
+        text_wt = (wt/3.4)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Remove symptomatic plants from \nthe field or greenhouse to prevent \nthe spread of bacteria. Then, \nburn, bury or hot compost \nthe affected plants"
+    elif Categories[np.argmax(result[0])] == "Tomato___Early_blight":
+        text_wt = (wt/3.6)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Cover the soil under the plants \nwith mulch. Prune the bottom \nleaves to prevent early blight \nspores from goin up onto the \nleaves."
+    elif Categories[np.argmax(result[0])] == "Tomato___healthy":
+        text_wt = (wt/4.48)+(wt/3.75)
+        text_ht = (ht/1.7)
+        management = "The plant is healthy"
+    elif Categories[np.argmax(result[0])] == "Tomato___Late_blight":
+        text_wt = (wt/3.5)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Sequential planting or planting \nseveral crops of tomatoes over \ntime Spraying fungicides is the \nmost effective way to prevent \nlate blight"
+    elif Categories[np.argmax(result[0])] == "Tomato___Leaf_Mold":
+        text_wt = (wt/3.6)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Use fans and avoid overhead \nwatering, and stake and prune \nplants to increase ventilation. \nAlso, apply fungicide at the \nfirst sign of infection." 
+    elif Categories[np.argmax(result[0])] == "Tomato___Septoria_leaf_spot":
+        text_wt = (wt/3.5)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Avoid overhead watering and \nprovide room for air circulation. \nPlant next year's tomatoes in \na different section of your \ngarden"
+    elif Categories[np.argmax(result[0])] == "Tomato___Target_Spot":
+        text_wt = (wt/3.5)+(wt/4)
+        text_ht = (ht/1.5)
+        management = "Keep the soil evenly moist \nand do not over-do the fertilizer. \nYou can apply calcium spray to \ntomato plants as a temporary \nmeasure."      
     canvas1.create_text(text_wt, text_ht, text = "Management:\n"+ management, font = "Times " + str(font_size) + " bold", tags = "result")
 
 def helpPage():
